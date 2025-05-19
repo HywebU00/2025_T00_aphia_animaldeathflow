@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  // font-size: #{$remFontSize}px;
+  scroll-behavior: smooth;
+  font-size: 1.125em;
+  // --變更為全站
+  &.smallSize {
+    font-size: 0.938em;
+  }
+
+  &.largeSize {
+    font-size: 1.125em;
+  }
+}
+
+body {
+  &.noscroll {
+    position: static;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.row {
+  @include makeRow();
+
+  & > div {
+    box-sizing: border-box;
+  }
+}
+
+// 最外圍預設為100%
+.wrapper {
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+  background-image: url('../images/loginbg.jpg');
+  background-position: center top;
+  background-repeat: repeat;
+
+  @include screen('mobile') {
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  &.loginpage {
+    &::after {
+      content: '';
+      height: 22px;
+      width: 100%;
+      background-color: $colorLight;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+    &::before {
+      content: '';
+      height: 22px;
+      width: 35%;
+      background-color: #002770;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    footer {
+      padding: 3em 0 1em;
+      background-image: none;
+      @include screen('mobile') {
+        padding: 2em 0 1em;
+        .container {
+          width: 90%;
+        }
+      }
+      .footerInfo {
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+      p {
+        color: lighten($color: $colorDarkgreen, $amount: 30);
+        padding: 2em 0 0 0;
+        position: relative;
+        &::before {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background: rgba(167, 161, 143, 0);
+          background: linear-gradient(90deg, rgba(167, 161, 143, 0) 0%, rgba(217, 211, 195, 1) 50%, rgba(167, 161, 143, 0) 100%);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+  margin: 0 auto;
+  max-width: $containerMax; //請看_variable.scss
+  position: relative;
+  @include containerFixed;
+  // outline: 1px solid red;
+}
+
+.main {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 6em;
+  transition: 0.5s;
+  min-height: 800px;
+  @include screen('mobile') {
+    padding-top: 170px;
+  }
+  @media (max-width: 500px) {
+    padding-top: 190px;
+  }
+
+  // 可先設定一個中央區塊最大寬，限制accessKey對齊
+  h2 {
+    line-height: 1.25em;
+  }
+}
+
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerPage ClassName
+.innerPage {
+  background-color: #fff;
+  & > .container {
+    padding-top: 25px;
+    @include gutter(80px); //gutter 代表左右要留白
+    display: flex;
+    @include screen('mobile') {
+      @include gutter(40px);
+    }
+  }
+
+  .centerBlock {
+    flex: none;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .leftBlock {
+    flex: none;
+    flex-basis: 260px;
+    max-width: 260px;
+    margin-right: 40px;
+    align-self: flex-start;
+    position: sticky;
+    top: 50px;
+
+    &.hidden {
+      & + .centerBlock {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    & + .centerBlock {
+      flex: auto;
+      flex-basis: calc(100% - 300px);
+      max-width: calc(100% - 300px);
+    }
+
+    @include screen('tablet') {
+      display: none;
+
+      & + .centerBlock {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+// 文字顏色區塊
+.redcolor {
+  color: $colorRed;
+  font-weight: bold;
+  @include screen('mobile') {
+    font-size: 1.188em;
+  }
+}
+.bluecolor {
+  color: $colorBlue;
+  font-weight: bold;
+  @include screen('mobile') {
+    font-size: 1.188em;
+  }
+}

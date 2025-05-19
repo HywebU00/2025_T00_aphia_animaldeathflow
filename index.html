@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>委託清除化製之原料來源單 電子化管理系統</title>
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <!-- mainJs -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  <style>
+    .demo_wrap {
+      max-width: 1400px;
+      margin: 0em auto 1em;
+      padding: 15px 15px 3em;
+      clear: both;
+      background: #fff;
+      position: relative;
+    }
+
+    .demo_wrap h1 {
+      padding: 0;
+      font-size: 1.75em;
+      display: flex;
+      line-height: 1.4em;
+      max-width: 600px;
+    }
+
+    .demo_wrap h1 img {
+      flex: 0 0 auto;
+      flex-basis: 60px;
+      max-width: 60px;
+      width: 60px;
+      height: 60px;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+
+    .demo_wrap h1 span {
+      flex: 1 1 auto;
+      color: #0e357b;
+    }
+
+    .demo_wrap h1 span em {
+      display: block;
+      font-style: normal;
+      color: #152238;
+    }
+
+    .num {
+      width: 12%;
+    }
+
+    body {
+      counter-reset: num;
+    }
+
+    table {}
+
+    table th {
+      color: #555;
+      font-size: 0.813rem;
+      text-align: left;
+      color: #666;
+    }
+
+    table td,
+    table th {
+      border-left: none;
+      border-right: none;
+      padding: 0.4em;
+    }
+
+    table td .gray {
+      color: #808080;
+      font-size: 0.938rem;
+    }
+
+    table td a {
+      display: block;
+    }
+
+    table tr th:first-child {
+      width: 30px;
+    }
+
+    table caption {
+      text-align: left;
+      font-weight: bold;
+      font-size: 1.25em;
+      padding: 0.5em 0;
+      color: #ff5050;
+    }
+
+    tbody tr td:first-child:before {
+      counter-increment: num;
+      display: block;
+      text-align: center;
+      color: #888;
+      font-size: 0.875rem;
+      content: counters(num, '.') ' ';
+    }
+
+    tbody tr td:nth-child(2) {
+      width: 300px;
+    }
+
+    tbody tr td:nth-child(3) {
+      width: 300px;
+    }
+
+
+
+    .btnGrp {
+      text-align: right;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    @media screen and (max-width: 545px) {
+      .btnGrp {
+        text-align: center;
+        position: relative;
+        right: auto;
+        top: 0;
+      }
+    }
+
+    .tableWrapper {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    @media screen and (max-width: 545px) {
+      .tableWrapper {
+        flex-flow: row wrap;
+      }
+
+      .tableWrapper h2 {
+        flex: 1 0 100%;
+        margin-bottom: 1em;
+      }
+    }
+
+    h2 {
+      margin: 0.5em 0 0.25em;
+      font-size: 1rem;
+      line-height: 1.25em;
+      white-space: nowrap;
+    }
+
+    .tableWrapper h2 {
+      flex: 0 0 150px;
+      padding-right: 1em;
+    }
+
+    hr {
+      border-top: 1px dashed #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="demo_wrap">
+    <h1><img src="images/logo.png" alt=""><span>委託清除化製之原料來源單<em>電子化管理系統</em></span></h1>
+    <div class="btnGrp">
+      <a href="https://github.com/HywebU00/HyUI_v4.0" class="btn">檔案下載</a>
+    </div>
+    <hr />
+    <div class="tableWrapper">
+      <h2>標準頁面</h2>
+      <!-- hyUI 標準頁面 -->
+      <table>
+        <thead>
+          <tr>
+            <th class="num">編號</th>
+            <th>頁面名稱</th>
+            <th>檔案名稱</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>登入頁</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="login.html"></a></td>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td>忘記密碼</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="forget_password.html"></a></td>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td>個人資料維護</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="個人資料維護.html"></a></td>
+
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>牧場_原料來源場帳號管理</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="牧場_原料來源場帳號管理.html"></a></td>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td>牧場_委託清除化製之原料來源單甲乙丙聯_登錄列表</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="牧場_委託清除化製之原料來源單_登錄列表.html"></a></td>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td>牧場_委託清除化製之原料來源單甲乙丙聯_登錄</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="牧場_委託清除化製之原料來源單_登錄.html"></a></td>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td>集運業者_委託清除化製之原料來源單_集運車簽收</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="集運業者_委託清除化製之原料來源單_集運車簽收.html"></a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>化製場_委託清除化製之原料來源單_化製場簽收</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="化製場_委託清除化製之原料來源單_化製場簽收.html"></a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>化製場_原料來源單查詢</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="化製場_原料來源單查詢.html"></a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>集運業者_集運車代理查詢</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="集運業者_集運車代理查詢.html"></a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>集運業者_集運車代理管理</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="集運業者_集運車代理管理.html"></a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>縣市政府_查核管理.html</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="縣市政府_查核管理.html"></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+
+  </div>
+  <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+  <script>
+    let aName = document.querySelectorAll('tbody a');
+    aName.forEach((i) => {
+      let Link = i.getAttribute('href');
+      i.textContent = Link;
+    });
+  </script>
+</body>
+
+</html>

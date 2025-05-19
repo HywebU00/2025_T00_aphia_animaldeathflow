@@ -1,0 +1,237 @@
+// 管理查詢區塊
+.manageGueries_block {
+  display: flex;
+  margin: 0 0 10px;
+  transition: 0.5s;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .adddataBtn {
+    margin: 0 0 10px;
+    flex: 0 0 auto;
+    button {
+      margin: 0;
+    }
+  }
+  .searchblock {
+    flex: 0 0 auto;
+    flex-basis: 300px;
+    max-width: 300px;
+    background-color: $colorGray2;
+    border: 1px solid #dadfe9;
+    padding: 0 1.5em;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px;
+    input {
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      padding: 0.3em;
+      font-size: 1.25em;
+    }
+    .searchbtn {
+      font-size: 0;
+      width: 34px;
+      height: 34px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      i {
+        width: 34px;
+        height: 34px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .adddataBtn {
+      flex: 1 1 auto;
+      flex-basis: 100%;
+      max-width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+    .searchblock {
+      flex: 1 1 auto;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+}
+// 來源標題
+.sourceTitle {
+  padding: 0.5em;
+  background-color: $colorPrimary;
+  color: #fff;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.orderNumber {
+  padding: 0.5em;
+  background-color: $colorSecondary;
+  color: $colorPrimary;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
+  @include screen('xsMobile') {
+    background-color: darken($color: $colorSecondary, $amount: 30);
+    color: #fff;
+  }
+}
+.formSource {
+  // border-top: none;
+  .formGrp {
+    align-items: center;
+    @include screen('xsMobile') {
+      align-items: stretch;
+    }
+    .formTitle {
+      max-width: 50%;
+      flex: 0 0 50%;
+      color: #808080;
+      background-color: $colorGray2;
+      font-weight: normal;
+      padding: 8px 20px 8px 10px;
+      position: relative;
+      &::after {
+        content: ':';
+        color: #808080;
+        font-size: 1.125em;
+        text-align: right;
+        padding-left: 10px;
+        padding-right: 0;
+      }
+      @include screen('xsMobile') {
+        max-width: 40%;
+        flex-basis: 40%;
+        margin: 0 0;
+        text-align: right;
+        background-color: $colorSecondary;
+        color: $colorPrimary;
+        font-weight: bold;
+        padding: 8px 10px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .formContent {
+      max-width: 50%;
+      flex-basis: 50%;
+      color: $colorDark;
+      padding: 8px 5px;
+      align-items: center;
+      flex-wrap: wrap;
+      @include screen('xsMobile') {
+        max-width: 60%;
+        flex-basis: 60%;
+      }
+      div,
+      span {
+        // flex: 1 1 auto;
+        // flex-basis: 100%;
+      }
+    }
+    &.singleContent {
+      .formTitle {
+        display: none;
+      }
+      .formContent {
+        max-width: 100%;
+        flex-basis: 100%;
+        textarea {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .btnGrp {
+    @include screen('xsMobile') {
+      button {
+        width: 80%;
+        margin: 0 auto 0.5em;
+      }
+    }
+  }
+  input,
+  select,
+  textarea {
+    width: auto;
+  }
+  input[type='checkbox'],
+  input[type='radio'] {
+    width: 1em;
+  }
+  .inputw80 {
+    width: 80%;
+  }
+  .inputw40 {
+    width: 40%;
+  }
+  .input_weight {
+    width: 100px;
+  }
+
+  .tableList {
+    margin: 0;
+    border-bottom: $colorPrimary 2px solid;
+    @include screen('tablet') {
+      width: 100%;
+    }
+  }
+  .tableList2 {
+    margin: 0;
+    border-bottom: $colorPrimary 2px solid;
+    table {
+      th {
+        padding: 12px 15px;
+      }
+      td {
+        padding: 2px 15px;
+        background-color: $colorGray2;
+
+        &.addnewItems {
+          background-color: darken($color: $colorGray2, $amount: 7);
+        }
+        &.addnewtype {
+          background-color: #fff;
+        }
+      }
+      @include screen('mobile') {
+        tr {
+          margin-bottom: 0;
+          border-top: none;
+        }
+        td {
+          padding: 5px 10px;
+          text-align: left;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.formAddbtn {
+  margin: 1em 0 0.5em;
+}
+.clostbtn {
+  font-size: 0;
+  width: 34px;
+  height: 34px;
+  margin-right: 8px;
+  padding: 0;
+
+  i {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+}

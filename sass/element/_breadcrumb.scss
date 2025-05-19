@@ -1,0 +1,29 @@
+.breadcrumb {
+  padding: 0.1em 0em;
+  margin: 0px 0 50px -25px;
+  @include screen('mobile') {
+    margin: 0px 0 50px 0;
+  }
+
+  ul {
+    @include liReset;
+    display: flex;
+    flex-flow: row wrap;
+    background-image: url('../images/breadcrumb_icon.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 1.5em;
+    li {
+      margin: 0px 0.1em 0.1em 0px;
+      color: $colorLink;
+      & + li {
+        &:before {
+          @extend %slash;
+        }
+      }
+    }
+  }
+  a {
+    @include aSetting($colorWord);
+  }
+}
