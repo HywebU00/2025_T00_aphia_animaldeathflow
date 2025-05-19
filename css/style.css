@@ -4971,6 +4971,9 @@ img {
   .formGrid {
     border-top: 2px solid #0d3273;
   }
+  .formGrid:has(+ .btnGrp) {
+    border-top: none;
+  }
   .formGrid .formGrp {
     border-bottom: 1px solid #dadfe9;
     padding: 0.5em 0;
@@ -6340,6 +6343,7 @@ img {
       border-top: 1px solid #0d3273;
       border-bottom: 1px solid #0d3273;
       margin-bottom: 10px;
+      position: relative;
     }
     .tableList td {
       border: none !important;
@@ -6364,6 +6368,18 @@ img {
       font-weight: bold;
       color: #0d3273;
       background-color: #c6cedb;
+    }
+    .tableList.loaded td.checkboxfields {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      padding-left: 0;
+      z-index: 9;
+      background-color: transparent;
+      border-bottom: none !important;
+    }
+    .tableList.loaded td.checkboxfields:before {
+      display: none;
     }
   }
   @media (max-width: 490px) {
@@ -9726,6 +9742,23 @@ img {
     text-align: center;
     font-size: 1.25em;
     font-weight: bold;
+    position: relative;
+  }
+  .sourceTitle .selectAll {
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+    .sourceTitle .selectAll {
+      display: block;
+      position: absolute;
+      left: 5px;
+      top: 10px;
+      font-size: 1rem;
+    }
+    .sourceTitle .selectAll label {
+      display: flex;
+      align-items: center;
+    }
   }
   .orderNumber {
     padding: 0.5em;

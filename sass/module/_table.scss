@@ -87,6 +87,7 @@ table {
       border-top: 1px solid $colorPrimary;
       border-bottom: 1px solid $colorPrimary;
       margin-bottom: 10px; // background-color: #333;
+      position: relative;
     }
     td {
       // Behave  like a "row"
@@ -123,6 +124,18 @@ table {
       //     display: none;
       //   }
       // }
+      &.checkboxfields {
+        &:before {
+          display: none;
+        }
+        position: absolute;
+        left: 10px;
+        top: 0;
+        padding-left: 0;
+        z-index: 9;
+        background-color: transparent;
+        border-bottom: none !important;
+      }
     }
   }
   @media (max-width: 490px) {

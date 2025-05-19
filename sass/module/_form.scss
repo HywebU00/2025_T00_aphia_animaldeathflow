@@ -59,6 +59,9 @@ select::-ms-expand {
 .formGrid {
   border-top: 2px solid $colorPrimary;
   // padding-top: 1px;
+  &:has(+ .btnGrp) {
+    border-top: none;
+  }
   .formGrp {
     border-bottom: 1px solid #dadfe9;
     padding: 0.5em 0;
