@@ -6313,7 +6313,7 @@ img {
   }
   @media screen and (max-width: 991px) {
     .tableList {
-      width: calc(100% - 60px);
+      width: 100%;
       overflow-x: scroll;
     }
   }

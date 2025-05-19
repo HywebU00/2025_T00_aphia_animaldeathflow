@@ -63,7 +63,7 @@ table {
   border-bottom: $colorHr 3px solid;
 
   @include screen('tablet') {
-    width: calc(100% - 60px);
+    width: 100%;
     overflow-x: scroll;
   }
   @include screen('mobile') {
