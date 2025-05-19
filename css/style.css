@@ -7190,6 +7190,7 @@ img {
   }
   .pagination .page li.first a, .pagination .page li.prev a, .pagination .page li.next a, .pagination .page li.last a {
     text-indent: -9999px;
+    font-size: 0;
     position: relative;
     background: #fff;
   }
