@@ -6538,6 +6538,16 @@ img {
   .ap table td.num {
     white-space: nowrap;
   }
+  .lp table td.aRight,
+  .ap table td.aRight {
+    text-align: right;
+  }
+  @media screen and (max-width: 767px) {
+    .lp table td.aRight,
+    .ap table td.aRight {
+      text-align: left;
+    }
+  }
   .lp table td.num,
   .ap table td.num {
     text-align: center;
@@ -9861,6 +9871,9 @@ img {
   }
   .formSource .input_weight {
     width: 100px;
+  }
+  .formSource .input_aRight {
+    text-align: right;
   }
   .formSource .tableList {
     margin: 0;

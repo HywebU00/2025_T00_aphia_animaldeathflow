@@ -17,6 +17,12 @@
       &.num {
         white-space: nowrap;
       }
+      &.aRight {
+        text-align: right;
+        @include screen('mobile') {
+          text-align: left;
+        }
+      }
       &.num {
         text-align: center;
         color: $colorWord;
