@@ -102,6 +102,7 @@
 }
 .formSource {
   // border-top: none;
+  position: relative;
   .formGrp {
     align-items: center;
     @include screen('xsMobile') {
@@ -236,6 +237,12 @@
         }
       }
     }
+  }
+  .closeblock {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    z-index: 10;
   }
 }
 .formAddbtn {
